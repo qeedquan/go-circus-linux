@@ -24,9 +24,9 @@ func quitEvents() {
 			break
 		}
 		switch ev := ev.(type) {
-		case *sdl.QuitEvent:
+		case sdl.QuitEvent:
 			os.Exit(0)
-		case *sdl.KeyDownEvent:
+		case sdl.KeyDownEvent:
 			switch ev.Sym {
 			case sdl.K_ESCAPE:
 				os.Exit(0)

@@ -489,9 +489,9 @@ func highScoreScreen() {
 				break
 			}
 			switch ev.(type) {
-			case *sdl.QuitEvent:
+			case sdl.QuitEvent:
 				exit(0)
-			case *sdl.KeyDownEvent:
+			case sdl.KeyDownEvent:
 				return
 			}
 		}
@@ -518,9 +518,9 @@ loop:
 				break
 			}
 			switch ev := ev.(type) {
-			case *sdl.QuitEvent:
+			case sdl.QuitEvent:
 				exit(0)
-			case *sdl.KeyDownEvent:
+			case sdl.KeyDownEvent:
 				switch ev.Sym {
 				case sdl.K_SPACE, sdl.K_TAB, sdl.K_p:
 					break loop
